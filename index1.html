@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Budget Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>بجٹ کیلکولیٹر</h1>
+      
+        <!-- Income Input Section -->
+        <div class="input-section">
+          <label for="income">ماہانہ آمدنی:</label>
+          <input type="number" id="income" placeholder="اپنی ماہانہ آمدنی درج کریں">
+        </div>
+      
+        <!-- Expense Input Section -->
+        <div class="input-section">
+          <label for="expense">خرچ کی تفصیل:</label>
+          <input type="text" id="expense-description" placeholder="خرچ کی تفصیل درج کریں">
+          
+          <label for="expense">رقم:</label>
+          <input type="number" id="expense-amount" placeholder="رقم درج کریں">
+          
+          <button onclick="addExpense()">خرچ شامل کریں</button>
+        </div>
+      
+        <!-- Expense List Display -->
+        <h2>اخراجات</h2>
+        <ul id="expense-list"></ul>
+        <div id="warning-message" class="warning hidden">
+          خبردار: آپ اپنی آمدنی سے تجاوز کر رہے ہیں اور منفی بجٹ میں جا رہے ہیں!
+        </div>
+        
+        <!-- Budget Summary Section -->
+        <div class="summary-section">
+          <h3>بجٹ کا خلاصہ</h3>
+          <p>کل آمدنی: <span id="display-income">0</span> روپے</p>
+          <p>کل اخراجات: <span id="display-expenses">0</span> روپے</p>
+          <p>باقی رقم: <span id="remaining-balance">0</span> روپے</p>
+        </div>
+        <button class="clear-button" onclick="clearAll()">سب صاف کریں</button>
+      </div>
+      
+
+    <script src="script.js"></script>
+</body>
+</html>
